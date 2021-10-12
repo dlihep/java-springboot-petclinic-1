@@ -5,12 +5,12 @@ pipeline {
         jdk 'jdk8'
     }
     environment { 
-        AWS_REGION = 'us-east-1'
-        ECRREGISTRY = '464599248654.dkr.ecr.us-east-1.amazonaws.com'
-        IMAGENAME = 'demomk'
+        AWS_REGION = 'us-east-2'
+        ECRREGISTRY = '464599248654.dkr.ecr.us-east-2.amazonaws.com'
+        IMAGENAME = 'dokoimage'
         IMAGE_TAG = 'latest'
-        ECS_CLUSTER = 'marcelcluster'
-        ECS_SERVICE = 'marcelservice'
+        ECS_CLUSTER = 'dokocluster'
+        ECS_SERVICE = 'dokoservice'
     }
     stages {
        stage ('Clone') {
