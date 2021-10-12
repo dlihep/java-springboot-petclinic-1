@@ -6,7 +6,7 @@ pipeline {
     }
     environment { 
         AWS_REGION = 'us-east-2'
-        ECRREGISTRY = '464599248654.dkr.ecr.us-east-2.amazonaws.com'
+        ECRREGISTRY = '579036934425.dkr.ecr.us-east-2.amazonaws.com/dokorepo'
         IMAGENAME = 'dokoimage'
         IMAGE_TAG = 'latest'
         ECS_CLUSTER = 'dokocluster'
