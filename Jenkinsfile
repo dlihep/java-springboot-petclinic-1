@@ -5,8 +5,8 @@ pipeline {
         jdk 'jdk8'
     }
     environment { 
-        AWS_REGION = 'us-east-2'
-        ECRREGISTRY = '579036934425.dkr.ecr.us-east-2.amazonaws.com/dokorepo'
+        AWS_REGION = 'us-east-1'
+        ECRREGISTRY = '579036934425.dkr.ecr.us-east-1.amazonaws.com/dokorepo'
         IMAGENAME = 'dokoimage'
         IMAGE_TAG = 'latest'
         ECS_CLUSTER = 'dokocluster'
