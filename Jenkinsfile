@@ -50,7 +50,7 @@ pipeline {
         
          stage('AWS ecr login') {
             steps {
-                sh 'aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECRREGISTRY}'
+                sh 'aws ecr get-login-password --region ${AWS_REGION} | docker login --username nyemb --password-stdin ${ECRREGISTRY}'
             }
         }        
          stage('docker build and tag') {
