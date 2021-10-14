@@ -50,8 +50,7 @@ pipeline {
         
          stage('AWS ecr login') {
             steps {
-                sh 'alias aws='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY amazon/aws-cli' aws ecr get-login-password \ --region <us-east-1> \docker login \ --username AWS \
-    --password-stdin <579036934425>.dkr.ecr.<us-east-1>.amazonaws.com'
+                sh 'aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECRREGISTRY}'
             }
         }        
          stage('docker build and tag') {
