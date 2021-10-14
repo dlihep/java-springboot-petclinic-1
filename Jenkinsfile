@@ -6,7 +6,7 @@ pipeline {
     }
     environment { 
         AWS_REGION = 'us-east-1'
-        ECRREGISTRY = '579036934425.dkr.ecr.us-east-1.amazonaws.com/dokorepo'
+        ECRREGISTRY = '579036934425.dkr.ecr.us-east-1.amazonaws.com'
         IMAGENAME = 'dokoimage'
         IMAGE_TAG = 'latest'
         ECS_CLUSTER = 'dokocluster'
@@ -50,7 +50,7 @@ pipeline {
         
          stage('AWS ecr login') {
             steps {
-                sh 'aws ecr get-login-password --region ${AWS_REGION} | docker login --username nyemb --password-stdin ${ECRREGISTRY}'
+                sh 'aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECRREGISTRY}'
             }
         }        
          stage('docker build and tag') {
